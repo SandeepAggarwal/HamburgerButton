@@ -214,6 +214,62 @@
             }
             break;
         }
+            
+        case LBHamburgerButtonTypeBackButton2:
+        {
+            switch (index) {
+                case 0:
+                {
+                    CAKeyframeAnimation* animRotate = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
+                    animRotate.values = forward ? @[ @0, @(M_PI*5/4) ] : @[ @(M_PI*5/4), @0];
+                    animRotate.calculationMode = kCAAnimationCubic;
+                    animRotate.keyTimes = @[ @0, @0.33, @0.73, @1.0];
+                    
+                    CGPoint startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing) : CGPointMake(_lineCenter.x - [self scale:10], _lineCenter.y + _lineHeight + [self scale:7.2]);
+                    CGPoint endPoint = forward ? CGPointMake(_lineCenter.x - [self scale:10], _lineCenter.y + _lineHeight + [self scale:7.2]) : CGPointMake(_lineCenter.x, _lineCenter.y - _lineHeight - _lineSpacing);
+                    CGPoint controlPoint = CGPointMake(_lineCenter.x + [self scale:15], _lineCenter.y);
+                    
+                    CAKeyframeAnimation* animPosition = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+                    animPosition.path = [UIBezierPath animateBezierPathFrom:startPoint toPoint:endPoint controlPoint:controlPoint].CGPath;
+                    animPosition.removedOnCompletion = NO;
+                    animPosition.fillMode = kCAFillModeForwards;
+                    
+                    return @[ animRotate, animPosition ];
+                }
+                case 1:
+                {
+                    CAKeyframeAnimation* animRotate = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
+                    animRotate.values = forward ? @[ @0, @(M_PI) ] : @[ @(M_PI), @0];
+                    
+                    CAKeyframeAnimation* animScale = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.x"];
+                    animScale.values = forward ? @[ @1, @0.0 ] : @[ @0.0, @1 ];
+                    
+                    return @[ animRotate, animScale ];
+                }
+                case 2:
+                {
+                    CAKeyframeAnimation* animRotate = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
+                    animRotate.values = forward ? @[ @0, @(-M_PI*5/4) ] : @[ @(-M_PI*5/4), @0];
+                    animRotate.calculationMode = kCAAnimationCubic;
+                    animRotate.keyTimes = @[ @0, @0.33, @0.73, @1.0];
+                    
+                    CGPoint startPoint = forward ? CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing) : CGPointMake(_lineCenter.x - [self scale:10], _lineCenter.y - _lineHeight - [self scale:7.2]);
+                    CGPoint endPoint = forward ? CGPointMake(_lineCenter.x - [self scale:10], _lineCenter.y - _lineHeight - [self scale:7.2]) : CGPointMake(_lineCenter.x, _lineCenter.y + _lineHeight + _lineSpacing);
+                    CGPoint controlPoint = CGPointMake(_lineCenter.x + [self scale:15], _lineCenter.y);
+                    
+                    CAKeyframeAnimation* animPosition = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+                    animPosition.path = [UIBezierPath animateBezierPathFrom:startPoint toPoint:endPoint controlPoint:controlPoint].CGPath;
+                    animPosition.removedOnCompletion = NO;
+                    animPosition.fillMode = kCAFillModeForwards;
+                    
+                    return @[ animRotate, animPosition ];
+                }
+                default:
+                    break;
+            }
+            break;
+        }
+            
         default:
             break;
     }

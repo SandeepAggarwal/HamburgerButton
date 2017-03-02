@@ -34,8 +34,9 @@ typedef enum {
     /** Show back (<-) button after switch state/animate. */
     LBHamburgerButtonTypeBackButton = 0,
     /** Show close (X) button after switch state/animate. */
-    LBHamburgerButtonTypeCloseButton
-    
+    LBHamburgerButtonTypeCloseButton,
+    /** Show back (<) button after switch state/animate. */
+    LBHamburgerButtonTypeBackButton2
     // other type
     
 } LBHamburgerButtonType;

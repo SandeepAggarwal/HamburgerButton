@@ -13,9 +13,11 @@
 
 @property (strong, nonatomic) LBHamburgerButton* buttonHamburgerClose;
 @property (strong, nonatomic) LBHamburgerButton* buttonHamburgerBack;
+@property (strong, nonatomic) LBHamburgerButton* buttonHamburgerBack2;
 
 @property (strong, nonatomic) LBHamburgerButton* buttonHamburgerCloseSmall;
 @property (strong, nonatomic) LBHamburgerButton* buttonHamburgerBackSmall;
+@property (strong, nonatomic) LBHamburgerButton* buttonHamburgerBackSmall2;
 
 @end
 
@@ -52,6 +54,20 @@
     
     [self.view addSubview:_buttonHamburgerBack];
     
+    _buttonHamburgerBack2 = [[LBHamburgerButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
+                                                  withHamburgerType:LBHamburgerButtonTypeBackButton2
+                                                          lineWidth:50
+                                                         lineHeight:50/6
+                                                        lineSpacing:5
+                                                         lineCenter:CGPointMake(50, 50)
+                                                              color:[UIColor whiteColor]];
+    [_buttonHamburgerBack2 setCenter:CGPointMake(_buttonHamburgerClose.center.x, _buttonHamburgerBack.center.y + 120)];
+    [_buttonHamburgerBack2 setBackgroundColor:[UIColor blackColor]];
+    [_buttonHamburgerBack2 addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_buttonHamburgerBack2];
+
+    
     _buttonHamburgerCloseSmall = [[LBHamburgerButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)
                                                         withHamburgerType:LBHamburgerButtonTypeCloseButton
                                                                 lineWidth:20
@@ -77,6 +93,20 @@
     [_buttonHamburgerBackSmall addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_buttonHamburgerBackSmall];
+    
+    
+    _buttonHamburgerBackSmall2 = [[LBHamburgerButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)
+                                                       withHamburgerType:LBHamburgerButtonTypeBackButton2
+                                                               lineWidth:20
+                                                              lineHeight:20/6
+                                                             lineSpacing:2
+                                                              lineCenter:CGPointMake(25, 25)
+                                                                   color:[UIColor whiteColor]];
+    [_buttonHamburgerBackSmall2 setCenter:CGPointMake(_buttonHamburgerCloseSmall.center.x, _buttonHamburgerBackSmall.center.y + 120)];
+    [_buttonHamburgerBackSmall2 setBackgroundColor:[UIColor blackColor]];
+    [_buttonHamburgerBackSmall2 addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_buttonHamburgerBackSmall2];
     
 }
 

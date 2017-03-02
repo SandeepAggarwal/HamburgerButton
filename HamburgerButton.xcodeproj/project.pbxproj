@@ -23,8 +23,7 @@
 		8A40CC261983F06300AF8B93 /* HamburgerButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC251983F06300AF8B93 /* HamburgerButtonTests.m */; };
 		8A40CC311983F28500AF8B93 /* LBHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A40CC301983F28500AF8B93 /* LBHamburgerButton.m */; };
 		8A40CC331983FB4C00AF8B93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A40CC321983FB4C00AF8B93 /* QuartzCore.framework */; };
-		8AF7E1BB19B6CD5A00F765E2 /* LBHamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7E1BA19B6CD5A00F765E2 /* LBHamburgerButton.swift */; };
-		8AFFDE5F19B7627600115E17 /* LBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFDE5E19B7627600115E17 /* LBViewController.swift */; };
+		C1B1AEB71E67FA2C00786AEE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B1AEB61E67FA2C00786AEE /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +59,7 @@
 		8A40CC2F1983F28500AF8B93 /* LBHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBHamburgerButton.h; sourceTree = "<group>"; };
 		8A40CC301983F28500AF8B93 /* LBHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBHamburgerButton.m; sourceTree = "<group>"; };
 		8A40CC321983FB4C00AF8B93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		8AF7E1BA19B6CD5A00F765E2 /* LBHamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBHamburgerButton.swift; sourceTree = "<group>"; };
-		8AFFDE5E19B7627600115E17 /* LBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBViewController.swift; sourceTree = "<group>"; };
+		C1B1AEB61E67FA2C00786AEE /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +128,9 @@
 				8A40CC0C1983F06300AF8B93 /* Main.storyboard */,
 				8A40CC0F1983F06300AF8B93 /* LBViewController.h */,
 				8A40CC101983F06300AF8B93 /* LBViewController.m */,
+				C1B1AEB61E67FA2C00786AEE /* Launch Screen.storyboard */,
 				8A40CC121983F06300AF8B93 /* Images.xcassets */,
 				8A40CC011983F06300AF8B93 /* Supporting Files */,
-				8AF7E1BA19B6CD5A00F765E2 /* LBHamburgerButton.swift */,
-				8AFFDE5E19B7627600115E17 /* LBViewController.swift */,
 			);
 			path = HamburgerButton;
 			sourceTree = "<group>";
@@ -246,6 +243,7 @@
 			files = (
 				8A40CC131983F06300AF8B93 /* Images.xcassets in Resources */,
 				8A40CC051983F06300AF8B93 /* InfoPlist.strings in Resources */,
+				C1B1AEB71E67FA2C00786AEE /* Launch Screen.storyboard in Resources */,
 				8A40CC0E1983F06300AF8B93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,9 +265,7 @@
 			files = (
 				8A40CC0B1983F06300AF8B93 /* LBAppDelegate.m in Sources */,
 				8A40CC311983F28500AF8B93 /* LBHamburgerButton.m in Sources */,
-				8AFFDE5F19B7627600115E17 /* LBViewController.swift in Sources */,
 				8A40CC071983F06300AF8B93 /* main.m in Sources */,
-				8AF7E1BB19B6CD5A00F765E2 /* LBHamburgerButton.swift in Sources */,
 				8A40CC111983F06300AF8B93 /* LBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
